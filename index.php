@@ -6,8 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="Main.css">
 </head>
 <body>
-	<div class="wrap">
+<div class="wrap">
 	
-	</div>
+</div>
 </body>
 </html>
