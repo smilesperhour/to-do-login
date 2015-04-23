@@ -9,9 +9,7 @@ if ($mysqli->connect_error) {
 else{
 
 	echo "Connection made";
-
 }
-
 $mysqli->close();
 
 ?>
