@@ -3,6 +3,8 @@
 <head>
 	<title> Simple To-do</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="reset.css">
 </head>
 <body>
 	<div class="wrap">
@@ -13,7 +15,7 @@
 			  $mysqli = new mysqli('localhost', 'root', 'root', 'tasks');
 			  $query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 			  if ($result = $mysqli->query($query)) {
-			  	$numrows = $result->fetch->num_rows:
+			  	$numrows = $result->fetch->num_rows;
 			  	if ($numrows>0) {
 			  		while($row = $result->fetch_assoc()){
 			  			$task_id = $row['id'];
@@ -27,7 +29,7 @@
 			  }
 
 			  ?>
-			  
+
 			</ul>
 		</div>
 	<form class="add-new-task" autocomplete="off">
