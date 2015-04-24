@@ -7,6 +7,7 @@
 <body>
 	<div class="wrap">
 		<div class="task-list">
+
 			<ul>
 			  <?php require("includes/connect.php");
 			  $mysqli = new mysqli('localhost', 'root', 'root', 'tasks');
@@ -17,13 +18,16 @@
 			  		while($row = $result->fetch_assoc()){
 			  			$task_id = $row['id'];
 			  			$task_name = $row["task"];
-			  			echo "<li>
-			  			<span>'$task_name'
-			  			";
+				echo '<li>
+					<span>'.$task_name. '</span>
+					<img id="'.$task_id'" class="delete-button" width="10px" scr="images/close.svg"/>
+				</li>';
 			  		}
 			  	}
 			  }
+
 			  ?>
+			  
 			</ul>
 		</div>
 	<form class="add-new-task" autocomplete="off">
